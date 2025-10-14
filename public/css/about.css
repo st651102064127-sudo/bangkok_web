@@ -1,0 +1,253 @@
+
+        :root {
+            --primary: #1A4B8C; /* Navy Blue */
+            --secondary: #E31C25; /* Red */
+            --accent: #FFC72C; /* Gold */
+            --bg-light: #F8F9FA; /* Off-white */
+            --bg-card: #FFFFFF;
+            --text-dark: #212529;
+            --text-muted: #6C757D;
+            --border: #DEE2E6;
+            --transition: all 0.5s ease;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* --- Header Section --- */
+        .about-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #0D2C57 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-content {
+            z-index: 10;
+            position: relative;
+        }
+
+        .header-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .header-subtitle {
+            font-size: 1.25rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- General Section Styles --- */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        /* --- Mission Section --- */
+        .mission-section {
+            background-color: var(--bg-card);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 4rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: -3rem; /* Overlap with header for a better look */
+            position: relative;
+            z-index: 20;
+        }
+
+        .mission-content {
+            flex: 1;
+        }
+
+        .mission-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mission-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* --- Team Section --- */
+        .team-section {
+            background-color: var(--bg-light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .team-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .team-position {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* --- Values Section --- */
+        .values-section {
+            background: linear-gradient(135deg, var(--primary), #153A6D);
+            color: white;
+        }
+
+        .values-section .section-title {
+            color: white;
+        }
+
+        .values-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .value-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .value-card:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .mission-section {
+                flex-direction: column;
+                padding: 3rem 2rem;
+            }
+            .mission-image {
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-header {
+                padding: 4rem 0;
+            }
+            .header-title {
+                font-size: 2.5rem;
+            }
+            .header-subtitle {
+                font-size: 1rem;
+            }
+            .mission-section {
+                padding: 2rem;
+            }
+            .section-title {
+                font-size: 1.75rem;
+            }
+            .team-img {
+                height: 250px;
+            }
+        }

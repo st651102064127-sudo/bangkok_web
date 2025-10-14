@@ -1,0 +1,35 @@
+-------------------------------------------------------------------
+Core Configuration and Dependencies
+-------------------------------------------------------------------
+1. DEPENDENCIES (Dependencies ที่ติดตั้งได้)
+/vendor
+/node_modules
+
+2. BUILD ARTIFACTS (ไฟล์ที่สร้างจาก Compiler)
+/public/hot
+/public/build
+
+3. USER UPLOADS & MEDIA (แก้ไขปัญหาไฟล์ใหญ่เกิน 100MB)
+/public/uploads
+
+4. DATABASE FILES (แก้ไขปัญหา mysql.sock)
+/mysql_data
+
+-------------------------------------------------------------------
+5. SECRETS, LOGS, CACHE, and System Files
+-------------------------------------------------------------------
+SECRETS (ไฟล์ข้อมูลลับ - ห้าม Commit)
+.env
+.env.testing
+
+LOGS & CACHE (ไฟล์ที่สร้างขณะรัน)
+/storage
+/bootstrap/cache
+npm-debug.log
+yarn-error.log
+
+SYSTEM & IDE FILES
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
